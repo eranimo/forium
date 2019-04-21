@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 
 module.exports = {
@@ -38,6 +39,15 @@ module.exports = {
 			minSize: 30000,
 			name: true
 		}
+	},
+
+	resolve: {
+		extensions: [".ts", ".tsx", ".js"],
+		plugins: [
+			new TsconfigPathsPlugin({
+				configFile: './tsconfig.json'
+			}),
+		],
 	},
 
 	plugins: [

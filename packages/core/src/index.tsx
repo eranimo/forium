@@ -1,12 +1,8 @@
 import React from 'react';
 import { render } from "react-dom";
+import { App } from './App';
 
-// import { ui } from '@forium/ui';
 
-function App() {
-  return <div>App</div>;
-}
-
-console.log('foobar');
+console.log('init app');
 
 render(<App />, document.getElementById('app'))
