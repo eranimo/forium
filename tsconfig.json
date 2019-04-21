@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6"],
+    "baseUrl": "./packages",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@forium/*": ["./*/src"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
