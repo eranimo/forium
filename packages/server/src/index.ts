@@ -58,8 +58,8 @@ const schema = makePrismaSchema({
   },
 
   outputs: {
-    schema: path.join(__dirname, './generated/schema.graphql'),
-    typegen: path.join(__dirname, './generated/nexus.ts'),
+    schema: path.join(__dirname, '../generated/schema.graphql'),
+    typegen: path.join(__dirname, '../generated/nexus.ts'),
   },
 })
 
