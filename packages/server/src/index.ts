@@ -30,10 +30,11 @@ const Mutation = prismaObjectType({
       type: 'Post',
       args: {
         title: stringArg(),
+        content: stringArg(),
         authorId: idArg({ nullable: true })
       },
-      resolve: (_, { title, authorId }, ctx) => ctx.prisma.createPost({
-        title,
+      resolve: (_, { title, content, authorId }, ctx) => ctx.prisma.createPost({
+        title, content,
         author: { connect: { id: authorId } }
       })
     })
@@ -63,8 +64,16 @@ const schema = makePrismaSchema({
   },
 })
 
+const options = {
+  host: '0.0.0.0',
+  port: 4000,
+  endpoint: '/graphql',
+  subscriptions: '/subscriptions',
+  playground: '/playground',
+}
+
 const server = new GraphQLServer({
   schema,
   context: { prisma }
 })
-server.start(() => console.log('Server is running on http://localhost:4000'))
+server.start(options, () => console.log('Server is running on http://localhost:4000'))
