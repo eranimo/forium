@@ -1,0 +1,21 @@
+---
+name: Button
+---
+
+import { Playground, Props } from 'docz'
+import { Button } from '../src'
+import { Intent } from '../src/types'
+
+# Button
+
+<Props of={Button} />
+
+## Basic usage
+
+<Playground>
+  <Button>Click me</Button>
+  <Button kind={Intent.PRIMARY}>
+    Click me
+  </Button>
+</Playground>
+

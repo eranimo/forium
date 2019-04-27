@@ -3,9 +3,13 @@
   "compilerOptions": {
     "outDir": "./lib",
     "baseUrl": "src",
-    "rootDirs": ["src", "stories"]
+    "rootDirs": ["src", "docs"],
+    "declaration": true
   },
   "include": [
-    "./src"
+    "./src/**/*",
+  ],
+  "exclude": [
+    "./node_modules"
   ]
 }
