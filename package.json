@@ -23,13 +23,6 @@
   "homepage": "https://github.com/eranimo/forium#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
-    "@storybook/addon-actions": "^5.0.10",
-    "@storybook/addon-info": "^5.0.10",
-    "@storybook/addon-knobs": "^5.0.10",
-    "@storybook/addon-links": "^5.0.10",
-    "@storybook/addon-notes": "^5.0.10",
-    "@storybook/addons": "^5.0.10",
-    "@storybook/react": "^5.0.10",
     "@types/jest": "^24.0.11",
     "babel-loader": "^8.0.5",
     "jest": "^24.7.1",
@@ -39,12 +32,15 @@
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.4.4",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^3.3.0",
+    "docx": "^4.7.1",
+    "docz-theme-default": "^1.0.4"
   },
   "dependencies": {
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
     "@types/storybook__react": "^4.0.1",
+    "@types/styled-components": "^4.1.14",
     "grommet": "^2.6.6",
     "polished": "^3.2.0",
     "react": "^16.8.6",

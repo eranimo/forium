@@ -63,3 +63,5 @@ typings/
 packages/**/lib
 .yo-rc.json
 dist/
+lib/
+.docz

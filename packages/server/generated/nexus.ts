@@ -14,6 +14,7 @@ export interface NexusGenInputs {
   CommentCreateInput: { // input type
     author: NexusGenInputs['UserCreateOneWithoutCommentsInput']; // UserCreateOneWithoutCommentsInput!
     content: string; // String!
+    id?: string | null; // ID
     parent?: NexusGenInputs['CommentCreateOneInput'] | null; // CommentCreateOneInput
   }
   CommentCreateManyInput: { // input type
@@ -30,6 +31,7 @@ export interface NexusGenInputs {
   }
   CommentCreateWithoutAuthorInput: { // input type
     content: string; // String!
+    id?: string | null; // ID
     parent?: NexusGenInputs['CommentCreateOneInput'] | null; // CommentCreateOneInput
   }
   CommentWhereInput: { // input type
@@ -95,10 +97,12 @@ export interface NexusGenInputs {
     create?: NexusGenInputs['GroupCreateWithoutUsersInput'] | null; // GroupCreateWithoutUsersInput
   }
   GroupCreateWithoutPostsInput: { // input type
+    id?: string | null; // ID
     name: string; // String!
     users?: NexusGenInputs['UserGroupMembershipCreateManyWithoutGroupInput'] | null; // UserGroupMembershipCreateManyWithoutGroupInput
   }
   GroupCreateWithoutUsersInput: { // input type
+    id?: string | null; // ID
     name: string; // String!
     posts?: NexusGenInputs['PostCreateManyWithoutGroupInput'] | null; // PostCreateManyWithoutGroupInput
   }
@@ -164,6 +168,7 @@ export interface NexusGenInputs {
     comments?: NexusGenInputs['CommentCreateManyInput'] | null; // CommentCreateManyInput
     content: string; // String!
     group?: NexusGenInputs['GroupCreateOneWithoutPostsInput'] | null; // GroupCreateOneWithoutPostsInput
+    id?: string | null; // ID
     published?: boolean | null; // Boolean
     title: string; // String!
   }
@@ -171,6 +176,7 @@ export interface NexusGenInputs {
     author: NexusGenInputs['UserCreateOneWithoutPostsInput']; // UserCreateOneWithoutPostsInput!
     comments?: NexusGenInputs['CommentCreateManyInput'] | null; // CommentCreateManyInput
     content: string; // String!
+    id?: string | null; // ID
     published?: boolean | null; // Boolean
     title: string; // String!
   }
@@ -251,6 +257,7 @@ export interface NexusGenInputs {
     comments?: NexusGenInputs['CommentCreateManyWithoutAuthorInput'] | null; // CommentCreateManyWithoutAuthorInput
     email?: string | null; // String
     groups?: NexusGenInputs['UserGroupMembershipCreateManyWithoutUserInput'] | null; // UserGroupMembershipCreateManyWithoutUserInput
+    id?: string | null; // ID
     name: string; // String!
     posts?: NexusGenInputs['PostCreateManyWithoutAuthorInput'] | null; // PostCreateManyWithoutAuthorInput
   }
@@ -269,12 +276,14 @@ export interface NexusGenInputs {
   UserCreateWithoutCommentsInput: { // input type
     email?: string | null; // String
     groups?: NexusGenInputs['UserGroupMembershipCreateManyWithoutUserInput'] | null; // UserGroupMembershipCreateManyWithoutUserInput
+    id?: string | null; // ID
     name: string; // String!
     posts?: NexusGenInputs['PostCreateManyWithoutAuthorInput'] | null; // PostCreateManyWithoutAuthorInput
   }
   UserCreateWithoutGroupsInput: { // input type
     comments?: NexusGenInputs['CommentCreateManyWithoutAuthorInput'] | null; // CommentCreateManyWithoutAuthorInput
     email?: string | null; // String
+    id?: string | null; // ID
     name: string; // String!
     posts?: NexusGenInputs['PostCreateManyWithoutAuthorInput'] | null; // PostCreateManyWithoutAuthorInput
   }
@@ -282,6 +291,7 @@ export interface NexusGenInputs {
     comments?: NexusGenInputs['CommentCreateManyWithoutAuthorInput'] | null; // CommentCreateManyWithoutAuthorInput
     email?: string | null; // String
     groups?: NexusGenInputs['UserGroupMembershipCreateManyWithoutUserInput'] | null; // UserGroupMembershipCreateManyWithoutUserInput
+    id?: string | null; // ID
     name: string; // String!
   }
   UserGroupMembershipCreateManyWithoutGroupInput: { // input type
@@ -293,12 +303,14 @@ export interface NexusGenInputs {
     create?: NexusGenInputs['UserGroupMembershipCreateWithoutUserInput'][] | null; // [UserGroupMembershipCreateWithoutUserInput!]
   }
   UserGroupMembershipCreateWithoutGroupInput: { // input type
+    id?: string | null; // ID
     joined: any; // DateTime!
     role?: NexusGenEnums['Role'] | null; // Role
     user: NexusGenInputs['UserCreateOneWithoutGroupsInput']; // UserCreateOneWithoutGroupsInput!
   }
   UserGroupMembershipCreateWithoutUserInput: { // input type
     group: NexusGenInputs['GroupCreateOneWithoutUsersInput']; // GroupCreateOneWithoutUsersInput!
+    id?: string | null; // ID
     joined: any; // DateTime!
     role?: NexusGenEnums['Role'] | null; // Role
   }

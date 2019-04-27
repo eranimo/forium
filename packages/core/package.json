@@ -22,7 +22,8 @@
   },
   "scripts": {
     "build": "webpack --production",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "storybook": "../../node_modules/.bin/start-storybook -p 6006"
   },
   "bugs": {
     "url": "https://github.com/eranimo/forium/issues"
